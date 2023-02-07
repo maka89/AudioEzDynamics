@@ -8,7 +8,8 @@ Based on https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReis
 
 ### Gate
 ```c++
-  vector<double> x = getTestTone();
+
+	vector<double> x = getTestTone();
 	vector<double> y = vector<double>();
 
 	BasicGate g;
