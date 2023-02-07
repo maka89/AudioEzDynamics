@@ -28,7 +28,7 @@ for (int i = 0; i < x.size(); i++) {
 ```
 
 ### Compressor
-```
+```c++
 auto c = Compressor(); // Or RMSCompressor()
 c.setAttack(100.0);
 c.setRelease(300.0);
