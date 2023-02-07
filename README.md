@@ -26,3 +26,22 @@ for (int i = 0; i < x.size(); i++) {
 	y.push_back(tmp*x[i]);
 }
 ```
+
+### Compressor
+```
+auto c = Compressor();
+c.setAttack(100.0);
+c.setRelease(300.0);
+
+
+c.setKnee(0.0);
+c.setMakeup(0.0);
+c.setRatio(2.0);
+c.setThreshold(-25.0);
+c.setFs(48000.0);
+//c.setRMSTimefactor(40.0);
+for (int i = 0; i < x.size(); i++) {
+	double tmp = c.calc_gain(x[i]);
+	y.push_back(tmp*x[i]);
+}
+```
