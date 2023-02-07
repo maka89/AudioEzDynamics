@@ -22,8 +22,7 @@ g.setHold(50.0);
 
 
 for (int i = 0; i < x.size(); i++) {
-	double tmp;
-	tmp = g.calc_gain(x[i]);
-	y.push_back(tmp);
+	double tmp = g.calc_gain(x[i]);
+	y.push_back(tmp*x[i]);
 }
 ```
