@@ -9,21 +9,21 @@ Based on https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReis
 ### Gate
 ```c++
 
-	vector<double> x = getTestTone();
-	vector<double> y = vector<double>();
+vector<double> x = getTestTone();
+vector<double> y = vector<double>();
 
-	BasicGate g;
-	g.setFs(48000.0);
-	g.setAttack(500.0);
-	g.setRelease(5.0);
-	g.setFloor(-20.0);
-	g.setThreshold(-30.0);
-	g.setHold(50.0);
+BasicGate g;
+g.setFs(48000.0);
+g.setAttack(500.0);
+g.setRelease(5.0);
+g.setFloor(-20.0);
+g.setThreshold(-30.0);
+g.setHold(50.0);
 
 
-	for (int i = 0; i < x.size(); i++) {
-		double tmp;
-		tmp = g.calc_gain(x[i]);
-		y.push_back(tmp);
-	}
+for (int i = 0; i < x.size(); i++) {
+	double tmp;
+	tmp = g.calc_gain(x[i]);
+	y.push_back(tmp);
+}
 ```
