@@ -12,6 +12,7 @@ Currently the following usable classes exists:
 - `RMSDynamicsHi`: Compressor / Expander with RMS Detector.Like `RMSCompressor`, but worse =). See discussion below.
 
 New classes / dynamics processors can be created by inheriting from some of the abstract classes in "src/dynamics.hpp"
+Custom level detectors can also be made by inheriting from some of the abstract classes in "src/level_detectors.hpp"
 ## Usage
 
 ```c++
