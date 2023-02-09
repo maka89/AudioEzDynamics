@@ -18,25 +18,26 @@ Currently the following usable classes exists:
 
 using namespace dynamics;
 
-std::vector<double> x = getTestTone();
-std::vector<double> y;
+vector<double> process(vector<double> x){
+	vector<double> y;
 
-auto c = PeakCompressor();
-c.setAttack(100.0);
-c.setRelease(300.0);
+	auto c = PeakCompressor();
+	c.setAttack(100.0);
+	c.setRelease(300.0);
 
 
-c.setKnee(0.0);
-c.setMakeup(0.0);
-c.setRatio(2.0);
-c.setThreshold(-25.0);
-c.setFs(48000.0);
-//c.setRMSTime(10.0); //If using RMSCompressor()
-c.reset(); // Reset buffers.
-for (int i = 0; i < x.size(); i++) {
-	double tmp = c.calc_gain(x[i]);
-	y.push_back(tmp*x[i]);
-}
+	c.setKnee(0.0);
+	c.setMakeup(0.0);
+	c.setRatio(2.0);
+	c.setThreshold(-25.0);
+	c.setFs(48000.0);
+	//c.setRMSTime(10.0); //If using RMSCompressor()
+	c.reset(); // Reset buffers.
+	for (int i = 0; i < x.size(); i++) {
+		double tmp = c.calc_gain(x[i]);
+		y.push_back(tmp*x[i]);
+	}
+	return y;
 ```
 
 ## Info
