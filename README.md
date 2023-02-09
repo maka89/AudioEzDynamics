@@ -37,6 +37,8 @@ for (int i = 0; i < x.size(); i++) {
 ## Info
 
 ### Compressors
+![DynamicsHi](/doc/img/hi.png)
+
 Repos has classes a PeakCompressor() and RMSCompressor() based on Fig. 7c  in ref. [1].
 Can also be used as an upward expander.
 
@@ -44,7 +46,7 @@ It applies attack and release to the calculated gain in the log (dB) domain.
 
 
 ### DynamicsHi
-![DynamicsHi](/doc/img/hi.png)
+
 
 PeakDynamicsHi() and RMSDynamicsHi() are added for completeness. 
 Used for DownwardCompression (aka. regular compression) or Upward Expansion.
@@ -62,7 +64,7 @@ Same as DynamicsHi classes, but used for Downward Expansion or Upwards Compressi
 
 Note that the issues with DynamicsHi, does not show up in the same way here.
 
-- No lag in the attack. There is a lag in the release, since sound level needs to fall below the threshold before gain starts being applied. 
+- No lag in the attack. There is,however, a lag in the release, since sound level needs to fall below the threshold before gain starts being applied. 
 - Not sure if release applied in the linear domain sounds bad for upward compression or downward expansion. Needs to be investigated.
   But implementing release in the dB domain seems hard, without complicating the design.
   The magnitude of the gain (in dB) gets higher the more silent the input signal. And thus the release time can get very short if the soundlevel drops to silence.
