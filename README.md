@@ -17,6 +17,7 @@ Currently the following usable classes exists:
 #include <dynamics.hpp>
 
 using namespace dynamics;
+
 std::vector<double> x = getTestTone();
 std::vector<double> y;
 
