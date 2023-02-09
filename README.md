@@ -1,4 +1,4 @@
-# AudioCompressorCpp
+# AudioEzDynamics
 
 Classes for controlling dynamic range of audio.
 
@@ -27,6 +27,7 @@ c.setRatio(2.0);
 c.setThreshold(-25.0);
 c.setFs(48000.0);
 //c.setRMSTime(10.0); //If using RMSCompressor()
+c.reset(); // Reset buffers.
 for (int i = 0; i < x.size(); i++) {
 	double tmp = c.calc_gain(x[i]);
 	y.push_back(tmp*x[i]);
