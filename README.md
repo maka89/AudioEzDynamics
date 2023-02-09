@@ -38,6 +38,7 @@ vector<double> process(vector<double> x){
 		y.push_back(tmp*x[i]);
 	}
 	return y;
+}
 ```
 
 ## Info
