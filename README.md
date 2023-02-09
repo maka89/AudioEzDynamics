@@ -16,6 +16,10 @@ Currently the following usable classes exists:
 ```c++
 #include <dynamics.hpp>
 
+using namespace dynamics;
+std::vector<double> x = getTestTone();
+std::vector<double> y = vector<double>();
+
 auto c = PeakCompressor();
 c.setAttack(100.0);
 c.setRelease(300.0);
