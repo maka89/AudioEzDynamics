@@ -50,13 +50,15 @@ namespace dynamics {
 	
 	class ParameterSmoother {
 	public:
-		ParameterSmoother() :val(0.0) { setFs(48000.0); setTime(50.0); }
-		double get(double x) {
+		ParameterSmoother() { setFs(48000.0); setTime(50.0); reset(); }
+		double process(double x) {
 			val = a * val + b * x;
 			return val;
 		}
 		void setTime(double t) { this->t = t; recalc(); }
 		void setFs(double fs) { this->fs = fs; recalc(); }
+		void reset() { setVal(0.0); }
+		void setVal(double x) { val = x; }
 	private:
 		void recalc() {
 			this->a = std::exp(-std::log(9) * 1.0e3 / (this->t * this->fs));
