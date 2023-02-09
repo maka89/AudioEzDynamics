@@ -8,8 +8,8 @@ Currently the following usable classes exists:
 - `RMSCompressor`: Compressor / Expander with RMS Detector.
 - `PeakDynamicsLo`: Upwards Compressor / Downward Expander with Peak Detector.
 - `RMSDynamicsLo`: Upwards Compressor / Downward Expander with RMS Detector.
-- ~~`PeakDynamicsHi`: Compressor / Expander with Peak Detector.~~  Like `PeakCompressor`, but worse =). See discussion below.
-- ~~`RMSDynamicsHi`: Compressor / Expander with RMS Detector.~~ Like `RMSCompressor`, but worse =). See discussion below.
+- `PeakDynamicsHi`: Compressor / Expander with Peak Detector. Might sound bad. See discussion below.
+- `RMSDynamicsHi`: Compressor / Expander with RMS Detector. Might sound bad. See discussion below.
 
 
 ## Usage
@@ -46,7 +46,7 @@ It applies attack and release to the calculated gain in the log (dB) domain.
 ### DynamicsHi
 ![DynamicsHi](/doc/img/hi.png)
 
-PeakDynamicsHi() and RMSDynamicsHi() are added for completeness. But are probably not too useful.
+PeakDynamicsHi() and RMSDynamicsHi() are added for completeness. 
 Used for DownwardCompression (aka. regular compression) or Upward Expansion.
 Based on design outlined in Fig.7a in ref. [1] The same paper outlines some issues with this design:
 
@@ -62,12 +62,12 @@ Same as DynamicsHi classes, but used for Downward Expansion or Upwards Compressi
 
 Note that the issues with DynamicsHi, does not show up in the same way here.
 
-
+- No lag in the attack. There is a lag in the release, since sound level needs to fall below the threshold before gain starts being applied. 
 - Not sure if release applied in the linear domain sounds bad for upward compression or downward expansion. Needs to be investigated.
   But implementing release in the dB domain seems hard, without complicating the design.
   The magnitude of the gain (in dB) gets higher the more silent the input signal. And thus the release time can get very short if the soundlevel drops to silence.
   
-- No lag in the attack. There is a lag in the release, since sound level needs to fall below the threshold before gain starts being applied. 
+
 
 #### Discussion on release lag
 If the lag in the release is undesireable, the LevelDetector can be moved to the end of the sidechain, in the linear domain. 
