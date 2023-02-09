@@ -5,9 +5,11 @@ Classes for controlling dynamic range of audio.
 
 Currently the following usable classes exists: 
 - `PeakCompressor`: Compressor / Expander with Peak Detector.
-- `RMSCompresor`: Compressor / Expander with RMS Detector.
+- `RMSCompressor`: Compressor / Expander with RMS Detector.
 - `PeakDynamicsLo`: Upwards Compressor / Downward Expander with Peak Detector.
 - `RMSDynamicsLo`: Upwards Compressor / Downward Expander with RMS Detector.
+- `PeakDynamicsHi`: Compressor / Expander with Peak Detector. Like `PeakCompressor`, but worse =). See discussion below.
+- `RMSDynamicsHi`: Compressor / Expander with RMS Detector.Like `RMSCompressor`, but worse =). See discussion below.
 
 New classes / dynamics processors can be created by inheriting from some of the abstract classes in "src/dynamics.hpp"
 ## Usage
