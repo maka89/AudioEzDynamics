@@ -11,8 +11,7 @@ Currently the following usable classes exists:
 - `PeakDynamicsHi`: Compressor / Expander with Peak Detector. Like `PeakCompressor`, but worse =). See discussion below.
 - `RMSDynamicsHi`: Compressor / Expander with RMS Detector.Like `RMSCompressor`, but worse =). See discussion below.
 
-New classes / dynamics processors can be created by inheriting from some of the abstract classes in "src/dynamics.hpp"
-Custom level detectors can also be made by inheriting from some of the abstract classes in "src/level_detectors.hpp"
+
 ## Usage
 
 ```c++
@@ -78,7 +77,9 @@ The distortion could for instance be removed by removing the softKnee functional
 Another option would be to keep the level detector at the start of the sidechain, but set a max. level above the threshold the soundlevel is "allowed" to go.
 
 
-
+## Extending the code
+New classes / dynamics processors can be created by inheriting from some of the abstract classes in "src/dynamics.hpp"
+Custom level detectors can also be made by inheriting from some of the abstract classes in "src/level_detectors.hpp"
 
 ## References
 [1] [Giannoulis et al. (2012) *Digital Dynamic Range Compressor Design—A Tutorial and Analysis*](https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReiss-dynamicrangecompression-JAES2012.pdf)
