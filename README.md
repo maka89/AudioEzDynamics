@@ -18,7 +18,7 @@ Currently the following usable classes exists:
 
 using namespace dynamics;
 std::vector<double> x = getTestTone();
-std::vector<double> y = vector<double>();
+std::vector<double> y;
 
 auto c = PeakCompressor();
 c.setAttack(100.0);
