@@ -12,6 +12,7 @@ It applies attack and release to the calculated gain in the log (dB) domain.
 
 ### DynamicsHi
 ![DynamicsHi](/doc/img/hi.png)
+
 PeakDynamicsHi() and RMSDynamicsHi() are added for completeness. But are probably not too useful.
 Used for DownwardCompression (aka. regular compression) or Upward Expansion.
 Based on design outlined in Fig.7a in ref. [1] The same paper outlines some issues with this design:
@@ -22,6 +23,7 @@ Based on design outlined in Fig.7a in ref. [1] The same paper outlines some issu
 
 ### DynamicsLo
 ![DynamicsLo](/doc/img/lo.png)
+
 PeakDynamicsLo() and RMSDynamicsLo() class.
 Same as DynamicsHi classes, but used for Downward Expansion or Upwards Compression.
 
@@ -34,7 +36,7 @@ Note that the issues with DynamicsHi, does not show up in the same way here.
   
 - No lag in the attack. There is a lag in the release, since sound level needs to fall below the threshold before gain starts being applied. 
 
-#### Discussion on realease lag
+#### Discussion on release lag
 If the lag in the release is undesireable, the LevelDetector can be moved to the end of the sidechain, in the linear domain. 
 This will remove the lag entirely, but might lead to distortion, when the soundlevel is above the threshold. 
 The distortion could for instance be removed by removing the softKnee functionality and introducing a "hold time" as is know from gates.
