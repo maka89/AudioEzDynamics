@@ -12,10 +12,9 @@ Currently the following usable classes exists:
 
 
 ## Usage
-
+Some almost-functioning code for processing a single channel of audio.
 ```c++
 #include <dynamics.hpp>
-
 using namespace dynamics;
 
 vector<double> process(vector<double> x){
