@@ -3,20 +3,14 @@
 ## Intro
 Classes for controlling dynamic range of audio.
 
+Currently the following usable classes exists: 
+- `PeakCompressor`: Compressor / Expander with Peak Detector.
+- `RMSCompresor`: Compressor / Expander with RMS Detector.
+- `PeakDynamicsLo`: Upwards Compressor / Downward Expander with Peak Detector.
+- `RMSDynamicsLo`: Upwards Compressor / Downward Expander with RMS Detector.
+
+New classes / dynamics processors can be created by inheriting from some of the abstract classes in "src/dynamics.hpp"
 ## Usage
-Currently the following usable classes exists. There are two 
-```c++
-
-PeakCompressor()
-RMSCompressor()
-
-PeakDynamicsLo()
-RMSDynamicsLo()
-
-PeakDynamicsHi()
-RMSDynamicsHi()
-```
-
 
 ```c++
 #include <dynamics.hpp>
