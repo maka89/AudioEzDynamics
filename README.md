@@ -51,7 +51,7 @@ Used for DownwardCompression (aka. regular compression) or Upward Expansion.
 Based on design outlined in Fig.7a in ref. [1] The same paper outlines some issues with this design:
 
 - Sudden increases in volume leads to a "lag" in the attack. Since it needs time to ramp up to the threshold.
-- Unnatural sounding release, due to release being applied in linear domain. This applies to compression. if it also applies to upward expansion, Im not sure.
+- Unnatural sounding release, due to release being applied in linear domain. This applies to compression. if it also applies to upward expansion, I'm not sure.
 
 
 ### DynamicsLo
