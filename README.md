@@ -69,7 +69,7 @@ Note that the issues with DynamicsHi, does not show up in the same way here.
   
 
 
-#### Discussion on release lag
+#### Discussion on release lag for DynamicsLo processors
 If the lag in the release is undesireable, the LevelDetector can be moved to the end of the sidechain, in the linear domain. 
 This will remove the lag entirely, but might lead to distortion, when the soundlevel is above the threshold. 
 The distortion could for instance be removed by removing the softKnee functionality and introducing a "hold time" as is know from gates.
