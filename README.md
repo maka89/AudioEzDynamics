@@ -1,6 +1,5 @@
 # AudioCompressorCpp
 
-## Intro
 Classes for controlling dynamic range of audio.
 
 Currently the following usable classes exists: 
