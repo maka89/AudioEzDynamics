@@ -3,6 +3,43 @@
 ## Intro
 Classes for controlling dynamic range of audio.
 
+## Usage
+Currently the following usable classes exists. There are two 
+```c++
+
+PeakCompressor()
+RMSCompressor()
+
+PeakDynamicsLo()
+RMSDynamicsLo()
+
+PeakDynamicsHi()
+RMSDynamicsHi()
+```
+
+
+```c++
+#include <dynamics.hpp>
+
+auto c = PeakCompressor(); // Or 
+c.setAttack(100.0);
+c.setRelease(300.0);
+
+
+c.setKnee(0.0);
+c.setMakeup(0.0);
+c.setRatio(2.0);
+c.setThreshold(-25.0);
+c.setFs(48000.0);
+//c.setRMSTime(10.0); //If RMSCompressor()
+for (int i = 0; i < x.size(); i++) {
+	double tmp = c.calc_gain(x[i]);
+	y.push_back(tmp*x[i]);
+}
+```
+
+## Info
+
 ### Compressors
 Repos has classes a PeakCompressor() and RMSCompressor() based on Fig. 7c  in ref. [1].
 Can also be used as an upward expander.
@@ -44,28 +81,7 @@ The distortion could for instance be removed by removing the softKnee functional
 Another option would be to keep the level detector at the start of the sidechain, but set a max. level above the threshold the soundlevel is "allowed" to go.
 
 
-## Usage
 
-### Compressor
-```c++
-#include <dynamics.hpp>
-
-auto c = PeakCompressor(); // Or RMSCompressor()
-c.setAttack(100.0);
-c.setRelease(300.0);
-
-
-c.setKnee(0.0);
-c.setMakeup(0.0);
-c.setRatio(2.0);
-c.setThreshold(-25.0);
-c.setFs(48000.0);
-//c.setRMSTime(10.0); //If RMSCompressor()
-for (int i = 0; i < x.size(); i++) {
-	double tmp = c.calc_gain(x[i]);
-	y.push_back(tmp*x[i]);
-}
-```
 
 ## References
 [1] [Giannoulis et al. (2012) *Digital Dynamic Range Compressor Design—A Tutorial and Analysis*](https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReiss-dynamicrangecompression-JAES2012.pdf)
