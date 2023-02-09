@@ -39,7 +39,7 @@ for (int i = 0; i < x.size(); i++) {
 ### Compressors
 ![DynamicsHi](/doc/img/hi.png)
 
-Repos has classes a PeakCompressor() and RMSCompressor() based on Fig. 7c  in ref. [1].
+Repos has classes a PeakCompressor() and RMSCompressor() based on the design in Fig. 7c  in ref. [1].
 Can also be used as an upward expander.
 
 It applies attack and release to the calculated gain in the log (dB) domain.
