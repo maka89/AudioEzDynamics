@@ -11,6 +11,7 @@ It applies attack and release to the calculated gain in the log (dB) domain.
 
 
 ### DynamicsHi
+![DynamicsHi](/doc/img/hi.png)
 PeakDynamicsHi() and RMSDynamicsHi() are added for completeness. But are probably not too useful.
 Used for DownwardCompression (aka. regular compression) or Upward Expansion.
 Based on design outlined in Fig.7a in ref. [1] The same paper outlines some issues with this design:
@@ -20,6 +21,7 @@ Based on design outlined in Fig.7a in ref. [1] The same paper outlines some issu
 
 
 ### DynamicsLo
+![DynamicsLo](/doc/img/lo.png)
 PeakDynamicsLo() and RMSDynamicsLo() class.
 Same as DynamicsHi classes, but used for Downward Expansion or Upwards Compression.
 
@@ -44,6 +46,8 @@ Another option would be to keep the level detector at the start of the sidechain
 
 ### Compressor
 ```c++
+#include <dynamics.hpp>
+
 auto c = PeakCompressor(); // Or RMSCompressor()
 c.setAttack(100.0);
 c.setRelease(300.0);
