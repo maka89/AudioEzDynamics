@@ -40,4 +40,4 @@ for (int i = 0; i < x.size(); i++) {
 ```
 
 ## References
-[1] ["Digital Dynamic Range Compressor Design—A Tutorial and Analysis", DIMITRIOS GIANNOULIS et al.](https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReiss-dynamicrangecompression-JAES2012.pdf)
+[1] [Giannoulis, D. et al. (2012) *Digital Dynamic Range Compressor Design—A Tutorial and Analysis*](https://www.eecs.qmul.ac.uk/~josh/documents/2012/GiannoulisMassbergReiss-dynamicrangecompression-JAES2012.pdf)
