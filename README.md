@@ -15,7 +15,7 @@ Currently the following usable classes exists:
 Example of processing a single channel of audio.
 ```c++
 #include <dynamics.hpp>
-using namespace dynamics;
+using namespace ezdynamics;
 
 vector<double> process(vector<double> x){
 	vector<double> y;
