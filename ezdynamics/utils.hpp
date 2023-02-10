@@ -23,7 +23,7 @@ namespace ezdynamics {
 		double ret;
 		if (2.0 * os < -w)
 			ret = x;
-		else if (2.0 * os > w)
+		else if (2.0 * os >= w)
 			ret = t + (x - t) / r;
 		else
 			ret = x + (1.0 / r - 1.0) * std::pow(x - t + 0.5 * w, 2) * 0.5 / w;
