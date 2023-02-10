@@ -1,6 +1,6 @@
 #pragma once
 #include <cmath>
-namespace dynamics {
+namespace ezdynamics {
 
 	class AbstractLevelDetector {
 	public:

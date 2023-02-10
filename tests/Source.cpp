@@ -1,12 +1,12 @@
 #pragma once
-#include "../src/dynamics.hpp"
-#include "../src/level_detector.hpp"
+#include "../ezdynamics/dynamics.hpp"
+#include "../ezdynamics/level_detector.hpp"
 
 #include <iostream>
 #include <cstdlib>
 #include "testutils.h"
 using namespace std;
-using namespace dynamics;
+using namespace ezdynamics;
 
 
 vector<double> getTestTone() {

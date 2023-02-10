@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "../src/utils.hpp"
+#include "../ezdynamics/utils.hpp"
 #include <fstream>
 using namespace std;
 vector<double> genStep(int bef, int after, int len, double level) {
@@ -9,7 +9,7 @@ vector<double> genStep(int bef, int after, int len, double level) {
 		v.push_back(0.0);
 
 	for (int i = 0; i < len; i++) 
-		v.push_back(dynamics::db_to_gain(level));
+		v.push_back(ezdynamics::db_to_gain(level));
 
 	for (int i = 0; i < after; i++) 
 		v.push_back(0.0);
@@ -25,7 +25,7 @@ vector<double> genTestTone(double befd, double afterd, double lend, double sr, d
 	int len = (int)round(lend * sr);
 
 	double dt = 1.0 / sr;
-	double gain = dynamics::db_to_gain(level);
+	double gain = ezdynamics::db_to_gain(level);
 	auto v = vector<double>();
 	for (int i = 0; i < bef; i++)
 		v.push_back(0.0);
@@ -50,7 +50,7 @@ vector<double> genTestToneSteps(double befd, double afterd, double lend, double 
 	double t = 0.0;
 	for (int j = 0; j < levels.size(); j++) {
 		
-		double gain = dynamics::db_to_gain(levels[j]);
+		double gain = ezdynamics::db_to_gain(levels[j]);
 		for (int i = 0; i < len; i++) {
 			v.push_back(gain * sin(2.0 * 3.14159265 * freq * t));
 			t += dt;

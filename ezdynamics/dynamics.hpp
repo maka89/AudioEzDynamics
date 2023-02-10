@@ -3,7 +3,7 @@
 #include "utils.hpp"
 
 #include <cmath>
-namespace dynamics {
+namespace ezdynamics {
 
 	class DynamicsBase {
 	public:

@@ -4,7 +4,7 @@
 
 
 
-namespace dynamics {
+namespace ezdynamics {
 
 	const double lowest_number = std::numeric_limits<double>::denorm_min();
 
